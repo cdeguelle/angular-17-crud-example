@@ -1,3 +1,6 @@
+// Karma configuration file, see link for more information
+// https://karma-runner.github.io/1.0/config/configuration-file.html
+
 module.exports = function (config) {
   config.set({
     basePath: "",
@@ -24,7 +27,7 @@ module.exports = function (config) {
     coverageReporter: {
       dir: require("path").join(__dirname, "./coverage/angular-17-crud"),
       subdir: ".",
-      reporters: [{ type: "lcov" }],
+      reporters: [{ type: "html" }, { type: "text-summary" }, { type: "lcov" }],
     },
     reporters: ["progress", "kjhtml"],
     browsers: ["Chrome"],
